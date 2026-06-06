@@ -1,0 +1,28 @@
+# 1. 核心数据文件
+*.tif
+*.tiff
+*.shp
+*.shx
+*.dbf
+*.prj
+data/
+# 如果后续有轻量级的总结性 csv 需要上传，可以按需解除屏蔽
+
+# 2. Python 运行缓存与虚拟环境
+__pycache__/
+*.py[cod]
+*$py.class
+envs/
+venv/
+env/
+.env
+
+# 3. Jupyter Notebook 检查点
+.ipynb_checkpoints/
+
+# 4. Streamlit 隐私与本地配置
+.streamlit/secrets.toml
+
+# 5. 操作系统隐藏文件
+.DS_Store
+Thumbs.db
