@@ -197,7 +197,7 @@ st.markdown("---")
 col_bl, col_br = st.columns(2)
 
 with col_bl:
-    st.subheader("📉 植被指数(NDVI) 与地表温度定量演变")
+    st.subheader("📉 植被指数(NDVI)与地表温度定量演变")
     df_sample = df_flt.sample(n=min(1500, len(df_flt)), random_state=42)
     fig_scatter = px.scatter(
         df_sample, x="ndvi", y=lst_col, 
