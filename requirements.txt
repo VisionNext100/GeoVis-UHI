@@ -5,3 +5,4 @@ plotly
 scipy
 pydeck
 pyarrow
+statsmodels
