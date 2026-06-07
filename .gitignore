@@ -5,7 +5,6 @@
 *.shx
 *.dbf
 *.prj
-*.parquet
 *.csv
 # 若有轻量级 .csv 上传，可以解除屏蔽
 
