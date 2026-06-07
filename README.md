@@ -20,9 +20,9 @@ Shanghai-UHI-Dashboard/
 │   ├── SH_Built_Frac_1km.tif  # 1公里分辨率建成区密度栅格，用于区分城市与乡村区域
 │   ├── ……
 │   └── UHI_SH_2025_Winter.tif # 各年份各季节上海地表温度及植被指数数据，用于热岛效应时空分析（共16份）
-├── ProcessedData/            # Python 清洗后生成的轻量级数据集
+├── ProcessedData/             # Python 清洗后生成的轻量级数据集
 │   ├── uhi_matrix.parquet     # 包含 12w+ 空间网格样本的核心数据表
-│   └── *kepler_data.csv        # 专供 Kepler.gl 3D 渲染的时间序列底图
+│   └── *kepler_data.csv       # 专供 Kepler.gl 3D 渲染的时间序列底图
 ├── Figures/                   # Phase 3 生成的图表
 │   ├── 1_Summer_UHI_Trend.png
 │   ├── 2_Park_Cooling_Effect.png
