@@ -9,7 +9,7 @@ from scipy.spatial import cKDTree
 
 # 1. 页面基本配置
 st.set_page_config(
-    page_title="上海城市热岛效应数据探索平台",
+    page_title="上海市热岛效应数据探索平台",
     page_icon="🌡️",
     layout="wide",
     initial_sidebar_state="expanded"
