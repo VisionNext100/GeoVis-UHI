@@ -2,7 +2,7 @@
 ## DataVis Final Project
 
 ### 一、项目简介
-本项目为《数据可视化》期末课程最终交付成果。基于 Google Earth Engine (GEE) 平台，我提取了 2022-2025 年间 MODIS 高精度多时相卫星遥感影像，结合 ESA WorldCover 地表覆盖数据，深度量化并动态可视化了上海市城市热岛效应 (UHI) 的演变趋势。  
+本项目为《数据可视化》期末课程最终交付成果。基于 Google Earth Engine ([https://code.earthengine.google.com](https://code.earthengine.google.com)) 平台，我提取了 2022-2025 年间 MODIS 高精度多时相卫星遥感影像，结合 ESA WorldCover 地表覆盖数据，深度量化并动态可视化了上海市城市热岛效应 (UHI) 的演变趋势。  
 本项目旨在构建一个数据驱动的交互式探索平台，核心亮点包括：
 - 全局核心指标看板：实时运算并提取当前时相切片下的核心气候特征，量化展示全城平均热岛强度、极端点强温差、陆地均温及整体植被覆盖度，提供直观的宏观数据基准与水体掩膜说明。
 - 2D/3D 双引擎空间分布视窗：集成 Plotly 2D 精准像素热力图与基于 WebGL GPU 加速的 PyDeck 3D 动态“温度山”模型，用户可自由切换俯视学术量化视角与 360° 全景空间探索视角。
@@ -59,14 +59,14 @@ pip install numpy pandas scipy matplotlib seaborn plotly folium keplergl streaml
 ```shell
 streamlit run 4_streamlit_app.py
 ```
-当然，由于我已经部署好了 Streamlit Cloud，你也可以直接访问 [https://geovis-uhi.streamlit.app/](https://geovis-uhi.streamlit.app/) 查看效果。作为 collaborator，你最好先按照上述步骤配置好环境，便于协作。
+当然，由于我已经部署好了 Streamlit Cloud，你也可以直接访问 [https://geovis-uhi.streamlit.app](https://geovis-uhi.streamlit.app) 查看效果。作为 collaborator，你最好先按照上述步骤配置好环境，便于协作。
 
 ### 四、后续工作
 1\. 项目微调：每次修改代码后，仅需在本地执行
 ```shell
 streamlit run 4_streamlit_app.py
 ```
-即可同步查看修改效果。在确认无误后（需与团队所有成员确认）再 push 至此仓库，Streamlit Cloud 会自动检测并更新应用。一旦仓库更新，[https://geovis-uhi.streamlit.app/](https://geovis-uhi.streamlit.app/) 页面即会同步发生变化。  
+即可同步查看修改效果。在确认无误后（需与团队所有成员确认）再 push 至此仓库，Streamlit Cloud 会自动检测并更新应用。一旦仓库更新，[https://geovis-uhi.streamlit.app](https://geovis-uhi.streamlit.app) 页面即会同步发生变化。  
 2\. 准备答辩：制作 slides、撰写报告。  
 
 ### 五、成品展示
