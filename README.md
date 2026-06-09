@@ -91,5 +91,5 @@ streamlit run 4_streamlit_app.py
 <div align="center">
     <img src="https://cdn.jsdelivr.net/gh/VisionNext100/Image-Hosting/images/GeoVis-UHI/植被指数（NDVI）与地表温度定量演变和历史长周期热岛强度演变基准线.png" width="800" alt="植被指数（NDVI）与地表温度定量演变和历史长周期热岛强度演变基准线">
     <br>
-    <em>植被指数（NDVI）与地表温度定量演变和历史长周期热岛强度演变基准线.png, 2025 Spring, Night</em>
+    <em>植被指数（NDVI）与地表温度定量演变和历史长周期热岛强度演变基准线, 2025 Spring, Night</em>
 </div>
