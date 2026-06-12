@@ -27,11 +27,11 @@ Shanghai-UHI-Dashboard/
 │   ├── 1_Summer_UHI_Trend.png
 │   ├── 2_Park_Cooling_Effect.png
 │   └── 3_Day_Night_UHI.png
-├── UHI_Data_Export.js         # [Phase 1] GEE 数据拉取脚本 (JavaScript)
-├── 1_data_process.py          # [Phase 2] 空间栅格解析与特征对齐
-├── 2_spatial_analysis.py      # [Phase 3] 统计分析与相关性图表绘制
-├── 3_kepler_prep.py           # [Phase 4] 3D 动态时间轴数据提炼
-├── 4_streamlit_app.py         # [Phase 5] Streamlit 交互式网页主程序
+├── UHI_Data_Export.js         # [Phase 0] GEE 数据拉取脚本 (JavaScript)
+├── 1_data_process.py          # [Phase 1] 空间栅格解析与特征对齐
+├── 2_spatial_analysis.py      # [Phase 2] 统计分析与相关性图表绘制
+├── 3_kepler_prep.py           # [Phase 3] 3D 动态时间轴数据提炼
+├── 4_streamlit_app.py         # [Phase 4] Streamlit 交互式网页主程序
 ├── .gitignore
 ├── LICENSE              
 └── README.md                
