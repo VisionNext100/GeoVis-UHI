@@ -1,0 +1,28 @@
+# 基础数据文件
+*.tif
+*.tiff
+*.shp
+*.shx
+*.dbf
+*.prj
+*.csv
+# 若有轻量级 .csv 上传，可以解除屏蔽
+
+# Python 运行缓存与虚拟环境
+__pycache__/
+*.py[cod]
+*$py.class
+envs/
+venv/
+env/
+.env
+
+# Jupyter Notebook ckpts
+.ipynb_checkpoints/
+
+# Streamlit 隐私与本地配置
+.streamlit/secrets.toml
+
+# 操作系统隐藏文件
+.DS_Store
+Thumbs.db
