@@ -2,11 +2,8 @@
 
 ## 上海城市热岛效应多时相遥感可视化平台
 
-本项目是《数据可视化》课程期末项目。项目基于 2022—2025 年上海市遥感数据，分析城市热岛效应的空间分布、城乡温度梯度、公园冷岛效应、植被降温关系和长期变化趋势，并通过 Streamlit 构建交互式可视化平台。
-
-在线访问地址：
-
-[https://geovis-uhi.streamlit.app/](https://geovis-uhi.streamlit.app/)
+本项目是《数据可视化》课程期末项目。项目基于 2022—2025 年上海市遥感数据，分析城市热岛效应的空间分布、城乡温度梯度、公园冷岛效应、植被降温关系和长期变化趋势，并通过 Streamlit 构建交互式可视化平台。  
+在线访问地址：[https://geovis-uhi.streamlit.app](https://geovis-uhi.streamlit.app)
 
 ---
 
