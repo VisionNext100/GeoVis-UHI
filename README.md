@@ -5,7 +5,10 @@
 本项目是《数据可视化》课程期末项目。项目基于 2022—2025 年上海市遥感数据，分析城市热岛效应的空间分布、城乡温度梯度、公园冷岛效应、植被降温关系和长期变化趋势，并通过 Streamlit 构建交互式可视化平台。  
 在线访问地址：[https://geovis-uhi.streamlit.app](https://geovis-uhi.streamlit.app)
 
----
+<div align="center">
+    <img src="https://cdn.jsdelivr.net/gh/VisionNext100/VisionNext100.github.io@main/public/images/projects/project-uhi.png" width="800" alt="GeoVis-UHI">
+    <br>
+</div>
 
 ## 1. 项目主要功能
 
