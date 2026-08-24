@@ -6,7 +6,7 @@
 在线访问地址：[https://geovis-uhi.streamlit.app](https://geovis-uhi.streamlit.app)
 
 <div align="center">
-    <img src="https://cdn.jsdelivr.net/gh/VisionNext100/VisionNext100.github.io@main/public/images/projects/project-uhi.png" width="800" alt="GeoVis-UHI">
+    <img src="https://cdn.jsdelivr.net/gh/VisionNext100/VisionNext100.github.io@main/public/images/projects/project-uhi.png?v=2" width="800" alt="GeoVis-UHI">
     <br>
 </div>
 
