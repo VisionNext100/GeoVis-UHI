@@ -10,7 +10,7 @@
     <br>
 </div>
 
-## 1. 项目主要功能
+## 一、项目主要功能
 
 本项目包含以下功能：
 
@@ -37,81 +37,83 @@
 
 ---
 
-## 2. 数据说明
+## 二、数据说明
 
 项目中主要涉及两类数据：
 
-### 2.1 原始 TIF 数据
+1. **原始 TIF 数据**
 
-原始数据来自 Google Earth Engine 导出的遥感栅格影像。
+    原始数据来自 Google Earth Engine 导出的遥感栅格影像。
+   
+    典型文件包括：
 
-典型文件包括：
+    ```text
+    RawData/
+    ├── SH_Built_Frac_1km.tif
+    ├── UHI_SH_2022_Spring.tif
+    ├── UHI_SH_2022_Summer.tif
+    ├── ...
+    └── UHI_SH_2025_Winter.tif
+    ```
 
-```text
-RawData/
-├── SH_Built_Frac_1km.tif
-├── UHI_SH_2022_Spring.tif
-├── UHI_SH_2022_Summer.tif
-├── ...
-└── UHI_SH_2025_Winter.tif
-```
+    说明：
 
-说明：
+    - `UHI_SH_YYYY_Season.tif`：某一年、某一季节的上海热岛遥感切片，通常包含白天地表温度、夜间地表温度和 NDVI 等信息。
+    - `SH_Built_Frac_1km.tif`：建成区密度栅格，用于区分城市建成区和乡村背景区。
+    - 这些 TIF 数据主要用于重新生成项目数据表。当前项目包已包含处理好的数据，因此普通运行不需要重新处理 TIF。
+  
+---
 
-- `UHI_SH_YYYY_Season.tif`：某一年、某一季节的上海热岛遥感切片，通常包含白天地表温度、夜间地表温度和 NDVI 等信息。
-- `SH_Built_Frac_1km.tif`：建成区密度栅格，用于区分城市建成区和乡村背景区。
-- 这些 TIF 数据主要用于重新生成项目数据表。当前项目包已包含处理好的数据，因此普通运行不需要重新处理 TIF。
+2. **处理后的主数据表**
 
-### 2.2 处理后的主数据表
+    ```text
+    ProcessedData/uhi_matrix.parquet
+    ```
 
-```text
-ProcessedData/uhi_matrix.parquet
-```
-
-这是 Streamlit 网页直接读取的核心数据表，已经将遥感栅格数据整理为可分析的空间网格样本，包含年份、季节、昼夜、经纬度、地表温度、NDVI、建成区比例、热岛强度等字段。
+    这是 Streamlit 网页直接读取的核心数据表，已经将遥感栅格数据整理为可分析的空间网格样本，包含年份、季节、昼夜、经纬度、地表温度、NDVI、建成区比例、热岛强度等字段。
 
 ---
 
-## 3. 数据处理流程
+3. **数据处理流程**
 
-项目的数据流程如下：
+    项目的数据流程如下：
 
-```text
-GEE 导出遥感 TIF
-        ↓
-1_data_process.py
-读取 TIF、解析波段、展开坐标、计算热岛指标
-        ↓
-ProcessedData/uhi_matrix.parquet
-项目主数据表
-        ↓
-4_streamlit_app.py
-交互式可视化平台
-```
+    ```text
+    GEE 导出遥感 TIF
+            ↓
+    1_data_process.py
+    读取 TIF、解析波段、展开坐标、计算热岛指标
+            ↓
+    ProcessedData/uhi_matrix.parquet
+    项目主数据表
+            ↓
+    4_streamlit_app.py
+    交互式可视化平台
+    ```
 
-另外还有两个辅助输出流程：
+    另外还有两个辅助输出流程：
 
-```text
-uhi_matrix.parquet
-        ↓
-2_spatial_analysis.py
-        ↓
-Figures/*.png
-用于论文、报告、PPT 和 README 的静态图
-```
+    ```text
+    uhi_matrix.parquet
+            ↓
+    2_spatial_analysis.py
+            ↓
+    Figures/*.png
+    用于论文、报告、PPT 和 README 的静态图
+    ```
 
-```text
-uhi_matrix.parquet
-        ↓
-3_kepler_prep.py
-        ↓
-ProcessedData/kepler_data.csv
-用于交互地图、时间轴地图或空间动画展示
-```
+    ```text
+    uhi_matrix.parquet
+            ↓
+    3_kepler_prep.py
+            ↓
+    ProcessedData/kepler_data.csv
+    用于交互地图、时间轴地图或空间动画展示
+    ```
 
 ---
 
-## 4. 项目结构
+## 四、项目结构
 
 ```text
 GeoVis-UHI-main/
@@ -139,49 +141,47 @@ GeoVis-UHI-main/
 
 ---
 
-## 5. 快速复现
+## 五、快速复现
 
-### 5.1 安装依赖
+1. **安装依赖**
 
-建议使用 Python 3.10 或以上版本。
+    建议使用 Python 3.10 或以上版本。
 
-在项目根目录打开终端，执行：
+    在项目根目录打开终端，执行：
 
-```shell
-python -m pip install -r requirements.txt
-```
+    ```shell
+    python -m pip install -r requirements.txt
+    ```
+---
 
-### 5.2 配置 AI API Key（可选）
+2. **配置 API**
 
-如果只想查看基础图表，可以跳过这一步，并在网页侧边栏关闭 AI 分析。
+    如果只想查看基础图表，可以跳过这一步，并在网页侧边栏关闭 AI 分析；如果需要使用 AI 图表解读和 HTML 报告中的智能分析，需要复制 `.env.example`：
 
-如果需要使用 AI 图表解读和 HTML 报告中的智能分析，需要复制 `.env.example`：
+    ```shell
+    cp .env.example .env
+    ```
 
-```shell
-Copy-Item .env.example .env
-```
+    然后打开 `.env`，填写自己的 DeepSeek API Key：
 
-然后打开 `.env`，填写自己的 DeepSeek API Key：
+    ```text
+    DEEPSEEK_API_KEY=你的_API_Key
+    ```
+---
 
-```text
-DEEPSEEK_API_KEY=你的_API_Key
-```
+3. **启动网页**
 
-注意：`.env` 文件包含个人密钥，不要上传到公开仓库。
+    执行：
 
-### 5.3 启动网页
+    ```shell
+    python -m streamlit run 4_streamlit_app.py
+    ```
 
-执行：
-
-```shell
-python -m streamlit run 4_streamlit_app.py
-```
-
-启动后，浏览器会打开本地 Streamlit 页面。
+    启动后，浏览器会打开本地 Streamlit 页面。
 
 ---
 
-## 6. 可选：重新生成数据和图表
+## 六、重新生成数据和图表
 
 如果只运行网页，不需要执行本节命令。
 
@@ -204,7 +204,7 @@ python 3_kepler_prep.py
 
 ---
 
-## 7. AI 分析说明
+## 七、AI 分析说明
 
 AI 分析模块的作用是：根据图表背后的统计摘要，自动生成中文解释，而不是简单描述图片。
 
@@ -236,7 +236,7 @@ AI 分析模块的作用是：根据图表背后的统计摘要，自动生成�
 
 ---
 
-## 8. 运行注意事项
+## 八、运行注意事项
 
 1. 当前项目包已经包含 `ProcessedData/uhi_matrix.parquet`，因此可以直接运行网页。
 2. 如果要重新处理原始 TIF 数据，需要准备 `RawData/` 文件夹及对应 TIF 文件。
@@ -246,7 +246,7 @@ AI 分析模块的作用是：根据图表背后的统计摘要，自动生成�
 
 ---
 
-## 9. 成果展示
+## 九、成果展示
 <div align="center">
     <img src="https://cdn.jsdelivr.net/gh/VisionNext100/Image-Hosting/images/GeoVis-UHI/城市热岛空间分布特征2D平面热力图.png" width="800" alt="城市热岛空间分布特征2D平面热力图">
     <br>
@@ -273,7 +273,7 @@ AI 分析模块的作用是：根据图表背后的统计摘要，自动生成�
 
 ---
 
-## 10. 项目总结
+## 十、项目总结
 
 GeoVis-UHI 将遥感数据处理、空间可视化、机制分析、AI 图表解读和 HTML 报告生成连接起来，形成了一个完整的数据可视化项目流程。
 
